@@ -762,75 +762,6 @@ body.profile-open
 
 
 /* =========================================================
-   PRESETS BUTTON
-   ========================================================= */
-
-.presets-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:11px 17px;
-
-    border:
-        1px solid
-        rgba(100,183,246,.55);
-
-    background:
-        rgba(5,12,20,.5);
-
-    color:#dceeff;
-
-    text-decoration:none;
-
-    font-family:"Oxanium",sans-serif;
-
-    font-size:11px;
-
-    font-weight:500;
-
-    letter-spacing:.20em;
-
-    cursor:pointer;
-
-    transition:
-        background .25s,
-        color .25s,
-        border-color .25s,
-        box-shadow .25s,
-        transform .25s;
-}
-
-.presets-button:hover{
-
-    color:#fff;
-
-    background:
-        rgba(40,91,135,.25);
-
-    border-color:
-        rgba(125,205,255,.80);
-
-    box-shadow:
-        0 0 22px
-        rgba(67,157,225,.18);
-
-    transform:
-        translateY(-2px);
-}
-
-.presets-icon{
-
-    font-size:13px;
-
-    line-height:1;
-}
-
-
-/* =========================================================
    CLOSE BUTTON
    ========================================================= */
 
@@ -1749,101 +1680,6 @@ body.profile-open
         rgba(67,157,225,.18);
 }
 
-
-/* =========================================================
-   MUSIC CONTROL
-   ========================================================= */
-
-.music-control{
-
-    position:fixed;
-
-    right:40px;
-    bottom:40px;
-
-    z-index:30;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:
-        9px 13px;
-
-    border:
-        1px solid
-        rgba(90,166,235,.35);
-
-    background:
-        rgba(3,8,14,.72);
-
-    backdrop-filter:
-        blur(8px);
-
-    -webkit-backdrop-filter:
-        blur(8px);
-
-    clip-path:
-        polygon(
-            10px 0,
-            100% 0,
-            100% calc(100% - 10px),
-            calc(100% - 10px) 100%,
-            0 100%,
-            0 10px
-        );
-}
-
-.music-button{
-
-    width:34px;
-    height:28px;
-
-    border:0;
-
-    background:transparent;
-
-    color:#8fd0ff;
-
-    font-family:"Oxanium",sans-serif;
-
-    font-size:14px;
-
-    cursor:pointer;
-
-    transition:
-        color .2s,
-        text-shadow .2s;
-}
-
-.music-button:hover{
-
-    color:#fff;
-
-    text-shadow:
-        0 0 12px
-        rgba(100,190,255,.8);
-}
-
-.music-label{
-
-    font-size:9px;
-
-    letter-spacing:.18em;
-
-    color:
-        rgba(140,190,225,.55);
-
-    user-select:none;
-}
-
-audio{
-    display:none;
-}
-
-
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -2015,20 +1851,6 @@ audio{
         font-size:5px;
     }
 
-    .presets-button{
-
-        padding:7px 8px;
-
-        font-size:6px;
-
-        letter-spacing:.12em;
-
-        gap:4px;
-    }
-
-    .presets-icon{
-        font-size:8px;
-    }
 
     .close-profile{
 
@@ -2101,22 +1923,6 @@ audio{
     }
 
 
-    /* MUSIC */
-
-    .music-control{
-
-        right:16px;
-
-        bottom:16px;
-    }
-
-    .music-label{
-        display:none;
-    }
-
-}
-
-
 /* =========================================================
    REDUCED MOTION
    ========================================================= */
@@ -2163,25 +1969,6 @@ audio{
     </div>
 
 </div>
-
-
-<!-- =======================================================
-     LOCAL MUSIC
-     ======================================================= -->
-
-<audio
-    id="backgroundMusic"
-    loop
-    preload="auto"
->
-
-    <source
-        src="audio/background.mp3"
-        type="audio/mpeg"
-    >
-
-</audio>
-
 
 <!-- =======================================================
      LANDING PAGE
@@ -2275,23 +2062,6 @@ audio{
             <span class="character-title-main">
                 CHARACTER PROFILE
             </span>
-
-
-            <a
-                class="presets-button"
-                href="https://drive.google.com/drive/u/1/folders/1a80VVGi8gMLn3PPjYD0iPaKx3eGbpyL9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open presets"
-            >
-
-                <span class="presets-icon">
-                    📁
-                </span>
-
-                PRESETS
-
-            </a>
 
         </div>
 
@@ -2564,30 +2334,6 @@ audio{
 </div>
 
 
-<!-- =======================================================
-     MUSIC CONTROL
-     ======================================================= -->
-
-<div class="music-control">
-
-    <span class="music-label">
-        MUSIC
-    </span>
-
-    <button
-        class="music-button"
-        id="musicButton"
-        type="button"
-        aria-label="Play music"
-        title="Play / Pause"
-    >
-        ▶
-    </button>
-
-</div>
-
-<script>
-
 /* =========================================================
    PARTICLES
    ========================================================= */
@@ -2646,73 +2392,6 @@ for(
     );
 }
 
-
-/* =========================================================
-   MUSIC
-   ========================================================= */
-
-const music =
-    document.getElementById(
-        "backgroundMusic"
-    );
-
-const musicButton =
-    document.getElementById(
-        "musicButton"
-    );
-
-
-/* =========================================================
-   VOLUME
-
-   0.10 = 10%
-   0.15 = 15%
-   0.25 = 25%
-   0.50 = 50%
-   1.00 = 100%
-   ========================================================= */
-
-music.volume = 0.15;
-
-
-/* =========================================================
-   PLAY / PAUSE
-   ========================================================= */
-
-musicButton.addEventListener(
-    "click",
-    function(){
-
-        if(music.paused){
-
-            music.play()
-                .then(function(){
-
-                    musicButton.textContent =
-                        "❚❚";
-
-                })
-                .catch(function(error){
-
-                    console.log(
-                        "Music could not play:",
-                        error
-                    );
-
-                });
-
-        }
-        else{
-
-            music.pause();
-
-            musicButton.textContent =
-                "▶";
-
-        }
-
-    }
-);
 
 /* =========================================================
    CHARACTERS
