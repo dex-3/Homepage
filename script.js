@@ -295,8 +295,6 @@ function list() {
 
     profile.classList.add('hidden');
 
-    $('#back').classList.add('hidden');
-
 }
 
 
@@ -309,8 +307,6 @@ function openChar(c) {
     grid.classList.add('hidden');
 
     profile.classList.remove('hidden');
-
-    $('#back').classList.remove('hidden');
 
 
     $('#pname').textContent =
@@ -494,13 +490,10 @@ $('#logo').onclick = function() {
 
 
 /* =========================================================
-   BACK BUTTONS
+   BACK BUTTON
    ========================================================= */
 
-$('#back').onclick = list;
-
 $('#back2').onclick = list;
-
 
 /* =========================================================
    CURRENT YEAR
