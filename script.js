@@ -19,8 +19,8 @@ const characters = [
     ],
 
     [
-        'elsa-von-rietveld',
-        'Elsa von Rietveld',
+        'elsa-van-rietveld',
+        'Elsa van Rietveld',
         '24',
         'Netherlands',
         'Powerful',
@@ -154,8 +154,8 @@ const characters = [
     ],
 
     [
-        'ethyln-bernard',
-        'Ethyln Bernard',
+        'ethlyn-bernard',
+        'Ethlyn Bernard',
         '24',
         'Jamaica',
         'Powerful',
@@ -163,8 +163,8 @@ const characters = [
     ],
 
     [
-        'diane-cerezyna-tsoi',
-        'Diane Cerezyna Tsoi',
+        'diane-cezaryna-tsoi',
+        'Diane Cezaryna Tsoi',
         '25',
         'Slovakia',
         'Powerful',
